@@ -24,7 +24,7 @@ const getInfoApi = require("./src/controllers/getInfoApi.js");
 const PORT = process.env.PORT || 3001;
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {
+conn.sync({ force: false }).then(() => {
   server.listen(PORT, () => {
     console.log("%s listening at 3001");
     getInfoApi(); // eslint-disable-line no-console

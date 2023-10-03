@@ -8,6 +8,7 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialectModule: pg,
   dialect: "postgres",
   dialectOptions: {
+    rejectUnauthorized: false,
     ssl: true,
   },
   logging: false, // set to console.log to see the raw SQL queries

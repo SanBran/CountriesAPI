@@ -26,7 +26,6 @@ const PORT = process.env.PORT || 8000;
 // Syncing all the models at once.
 conn.sync({ force: false }).then(() => {
   server.listen(PORT, () => {
-    ;
-    getInfoApi(); // eslint-disable-line no-console
+    getInfoApi();
   });
 });

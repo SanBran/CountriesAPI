@@ -16,6 +16,7 @@ const getInfoApi = async () => {
       population: e.population,
     });
   });
+  console.log("Database filled")
 };
 
 module.exports = getInfoApi;

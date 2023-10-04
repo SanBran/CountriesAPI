@@ -3,7 +3,7 @@ const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const morgan = require("morgan");
-const routes = require("./routes/index.js");
+const router = require("./routes/index.js");
 
 require("./db.js");
 
@@ -32,7 +32,7 @@ server.use((req, res, next) => {
 });
 server.use(express.urlencoded({ extended: true }));
 
-server.use("/", routes);
+server.use("/", router);
 
 // Error catching endware.
 server.use((err, req, res, next) => {

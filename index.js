@@ -27,5 +27,7 @@ const PORT = process.env.PORT || 8000;
 conn.sync({ force: false }).then(() => {
   server.listen(PORT, () => {
     getInfoApi();
+    console.log(`Server listend in port ${PORT}`)
+
   });
 });

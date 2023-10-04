@@ -10,7 +10,7 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
   dialectOptions: {
     rejectUnauthorized: false,
     ssl: {
-      rejectUnauthorized: true
+      rejectUnauthorized: false,
     },
   },
   logging: false, // set to console.log to see the raw SQL queries
